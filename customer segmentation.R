@@ -344,7 +344,7 @@ test2 <- glm(Default_On_Payment~ Status_Checking_Acc+ Duration_in_Months+ I(Cred
              +I(Purposre_Credit_Taken == "A41") +I(Purposre_Credit_Taken == "A410") + I(Purposre_Credit_Taken == "A42") + I(Purposre_Credit_Taken == "A43") + I(Purposre_Credit_Taken == "A48") +I(Purposre_Credit_Taken == "A49")
              +Credit_Amount +I(Savings_Acc == "A64") + I(Savings_Acc == "A65")
              + I(Years_At_Present_Employment == "A74") +Inst_Rt_Income + I(Marital_Status_Gender == "A93") + Other_Debtors_Guarantors 
-             +Property +Age + I(Other_Inst_Plans == "A143") + Housing+ Num_CC + Telephone + Foreign_Worker, data=data.train, family=binomial())
+             +Property +Age + I(Other_Inst_Plans == "A143") + Housing+ Num_CC + Telephone + Foreign_Worker, data=data.test, family=binomial())
 
 summary(test2)
 
@@ -354,7 +354,7 @@ test3 <- glm(Default_On_Payment~ Status_Checking_Acc+ Duration_in_Months+ I(Cred
              +I(Purposre_Credit_Taken == "A41") +I(Purposre_Credit_Taken == "A410") + I(Purposre_Credit_Taken == "A42") + I(Purposre_Credit_Taken == "A43") + I(Purposre_Credit_Taken == "A48") +I(Purposre_Credit_Taken == "A49")
              +Credit_Amount +I(Savings_Acc == "A64") + I(Savings_Acc == "A65")
              + I(Years_At_Present_Employment == "A74") +Inst_Rt_Income + I(Marital_Status_Gender == "A93") + Other_Debtors_Guarantors 
-             +I(Property == "A122") +I(Property == "A124") +Age + I(Other_Inst_Plans == "A143") + Housing+ Num_CC + Telephone + Foreign_Worker, data=data.train, family=binomial())
+             +I(Property == "A122") +I(Property == "A124") +Age + I(Other_Inst_Plans == "A143") + Housing+ Num_CC + Telephone + Foreign_Worker, data=data.test, family=binomial())
 
 summary(test3)
 
@@ -456,5 +456,5 @@ FinalModel <- glm(Default_On_Payment~ Status_Checking_Acc+ Duration_in_Months+ I
              +I(Purposre_Credit_Taken == "A41") +I(Purposre_Credit_Taken == "A410") + I(Purposre_Credit_Taken == "A42") + I(Purposre_Credit_Taken == "A43") + I(Purposre_Credit_Taken == "A48") +I(Purposre_Credit_Taken == "A49")
              +Credit_Amount +I(Savings_Acc == "A64") + I(Savings_Acc == "A65")
              + I(Years_At_Present_Employment == "A74") +Inst_Rt_Income + I(Marital_Status_Gender == "A93") + Other_Debtors_Guarantors 
-             +I(Property == "A122") +I(Property == "A124") +Age + I(Other_Inst_Plans == "A143") + Housing+ Num_CC + Telephone + Foreign_Worker, data=data.train, family=binomial())
+             +I(Property == "A122") +I(Property == "A124") +Age + I(Other_Inst_Plans == "A143") + Housing+ Num_CC + Telephone + Foreign_Worker, data=data.test, family=binomial())
 
